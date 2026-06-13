@@ -181,7 +181,7 @@ main {
   }
 }
 
-@media (min-width: 568px){
+@media (max-width: 768px){
     nav h1{
         font-size: 2rem;
     }

@@ -6,37 +6,43 @@ let isAnimating = false;
 let role = null;
 let pret = false;
 
-
 const pits = document.querySelectorAll(".casse");
 const path = [16, 15, 14, 13, 12, 11, 10, 1, 2, 3, 4, 5, 6, 7];
-const playablePits = new Set(path);        
-const scorePits = new Set([0, 17]);         
-const deadPits = new Set([8, 9]);            
+const playablePits = new Set(path);
+const scorePits = new Set([0, 17]);
+const deadPits = new Set([8, 9]);
 document.querySelector(".tour").style.display = "none";
 
 //Ajouter du song
 const audioBtn = document.getElementById("btn3");
 const audio = document.getElementById("audio");
-audioBtn.addEventListener('click', () =>{
-    audioBtn.innerHTML=="Ajouter du song" ? audio.play().then( () =>{
-        audioBtn.innerHTML = "Retirer le song";
-    }).catch((error) =>{
-        console.log(error);
-    }) : audio.pause().then( () =>{
-        audioBtn.innerHTML = "Ajouter du song";
-    }).catch((error) =>{
-        console.log(error);
-    });
+audioBtn.addEventListener("click", () => {
+  audioBtn.innerHTML == "Ajouter du song"
+    ? audio
+        .play()
+        .then(() => {
+          audioBtn.innerHTML = "Retirer le song";
+        })
+        .catch((error) => {
+          console.log(error);
+        })
+    : audio
+        .pause()
+        .then(() => {
+          audioBtn.innerHTML = "Ajouter du song";
+        })
+        .catch((error) => {
+          console.log(error);
+        });
 });
-
-
 
 //Button de creation de prtie
 document.getElementById("btn1").addEventListener("click", async () => {
-  const res = await fetch("songo.php?action=creer").then(r => r.json());
+  const res = await fetch("songo.php?action=creer").then((r) => r.json());
   if (res.success) {
     role = res.role;
-    document.getElementById("status").innerText = `Code : ${res.code}. En attente du Joueur 2...`;
+    document.getElementById("status").innerText =
+      `Code : ${res.code}. En attente du Joueur 2...`;
     initGameListeners();
     startSyncLoop();
   }
@@ -45,10 +51,13 @@ document.getElementById("btn1").addEventListener("click", async () => {
 //Button pour rejoindre une partie
 document.getElementById("btn2").addEventListener("click", async () => {
   const code = document.getElementById("code").value;
-  const res = await fetch(`songo.php?action=rejoindre&code=${code}`).then(r => r.json());
+  const res = await fetch(`songo.php?action=rejoindre&code=${code}`).then((r) =>
+    r.json(),
+  );
   if (res.success) {
     role = res.role;
-    document.getElementById("status").innerText = `Partie rejointe ! Synchronisation...`;
+    document.getElementById("status").innerText =
+      `Partie rejointe ! Synchronisation...`;
     initGameListeners();
     startSyncLoop();
   } else {
@@ -58,7 +67,7 @@ document.getElementById("btn2").addEventListener("click", async () => {
 
 //Initialisation du jeux
 function initGameListeners() {
-  path.forEach(index => {
+  path.forEach((index) => {
     pits[index].addEventListener("click", () => {
       if (!pret || currentPlayer !== role) return;
       playTurn(index);
@@ -75,7 +84,7 @@ function startSyncLoop() {
   setInterval(async () => {
     if (isAnimating) return;
 
-    const data = await fetch("songo.php?action=sync").then(r => r.json());
+    const data = await fetch("songo.php?action=sync").then((r) => r.json());
     pret = data.ready;
 
     if (pret) {
@@ -83,9 +92,12 @@ function startSyncLoop() {
       document.querySelector(".grid").style.pointerEvents = "auto";
       document.querySelector(".grid").style.opacity = "1";
       document.querySelector(".tour").style.display = "block";
-      document.getElementById("status").innerText = `Vous êtes le Joueur ${role}`;
+      document.getElementById("status").innerText =
+        `Vous êtes le Joueur ${role}`;
 
-      const boardChanged = data.tableau.some((val, idx) => val !== tableau[idx]);
+      const boardChanged = data.tableau.some(
+        (val, idx) => val !== tableau[idx],
+      );
 
       if (boardChanged) {
         await updateLocalTableauWithAnimation(data.tableau);
@@ -129,7 +141,7 @@ async function playTurn(startIndex) {
     pathIdx = (pathIdx + 1) % path.length;
     currentPit = path[pathIdx];
 
-    if (currentPit === startIndex) continue; 
+    if (currentPit === startIndex) continue;
 
     tableau[currentPit]++;
     seeds--;
@@ -153,9 +165,10 @@ async function checkCaptures(lastPit) {
   let captured = 0;
   let pathIdx = path.indexOf(lastPit);
 
-  const oppCamp = currentPlayer === 1
-    ? new Set([1, 2, 3, 4, 5, 6, 7])
-    : new Set([16, 15, 14, 13, 12, 11, 10]);
+  const oppCamp =
+    currentPlayer === 1
+      ? new Set([1, 2, 3, 4, 5, 6, 7])
+      : new Set([16, 15, 14, 13, 12, 11, 10]);
   const oppFirstPit = currentPlayer === 1 ? 1 : 16;
 
   while (true) {
@@ -180,7 +193,9 @@ async function checkCaptures(lastPit) {
 
     if (scores[currentPlayer] >= 35) {
       setTimeout(() => {
-        alert(`Victoire ! Le Joueur ${currentPlayer} a atteint ${scores[currentPlayer]} points !`);
+        alert(
+          `Victoire ! Le Joueur ${currentPlayer} a atteint ${scores[currentPlayer]} points !`,
+        );
         isAnimating = true;
       }, 300);
       return;
@@ -201,18 +216,23 @@ function updateScoresUI() {
 function updateTurnUI() {
   let turnText = `Tour du Joueur ${currentPlayer}`;
   if (pret) {
-    turnText += currentPlayer === role ? " - Votre tour" : " - Attente de l'adversaire";
+    turnText +=
+      currentPlayer === role ? " - Votre tour" : " - Attente de l'adversaire";
   }
   document.querySelector(".tour").innerText = turnText;
 
-  path.forEach(index => {
-    pits[index].style.opacity = (currentPlayer === 1 && index >= 10) || (currentPlayer === 2 && index <= 7) ? "1" : "0.7";
+  path.forEach((index) => {
+    pits[index].style.opacity =
+      (currentPlayer === 1 && index >= 10) ||
+      (currentPlayer === 2 && index <= 7)
+        ? "1"
+        : "0.7";
   });
 }
 
 //Animation
 function animatePit(index, newValue) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     if (deadPits.has(index)) {
       resolve();
       return;

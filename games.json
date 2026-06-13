@@ -1,0 +1,370 @@
+{
+    "0B0F1A": {
+        "board": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "scores": {
+            "1": 0,
+            "2": 0
+        },
+        "current_player": 1,
+        "joueur1_present": 1,
+        "joueur2_present": 0
+    },
+    "33D047": {
+        "board": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "scores": {
+            "1": 0,
+            "2": 0
+        },
+        "current_player": 1,
+        "joueur1_present": 1,
+        "joueur2_present": 0
+    },
+    "B26E63": {
+        "board": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "scores": {
+            "1": 0,
+            "2": 0
+        },
+        "current_player": 1,
+        "joueur1_present": 1,
+        "joueur2_present": 0
+    },
+    "BFE1D9": {
+        "board": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "scores": {
+            "1": 0,
+            "2": 0
+        },
+        "current_player": 1,
+        "joueur1_present": 1,
+        "joueur2_present": 0
+    },
+    "E7087B": {
+        "board": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "scores": {
+            "1": 0,
+            "2": 0
+        },
+        "current_player": 1,
+        "joueur1_present": 1,
+        "joueur2_present": 0
+    },
+    "0A04D9": {
+        "board": null,
+        "scores": {
+            "1": 0,
+            "2": 0
+        },
+        "current_player": 1,
+        "joueur1_present": 1,
+        "joueur2_present": 1
+    },
+    "5FB917": {
+        "board": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "scores": {
+            "1": 0,
+            "2": 0
+        },
+        "current_player": 1,
+        "joueur1_present": 1,
+        "joueur2_present": 1
+    },
+    "157803": {
+        "board": null,
+        "scores": {
+            "1": 0,
+            "2": 0
+        },
+        "current_player": 2,
+        "joueur1_present": 1,
+        "joueur2_present": 1
+    },
+    "0D3FDC": {
+        "tableau": [
+            0,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            0
+        ],
+        "scores": {
+            "1": 0,
+            "2": 0
+        },
+        "current_player": 1,
+        "joueur1_present": 1,
+        "joueur2_present": 1
+    },
+    "F7947B": {
+        "tableau": [
+            0,
+            7,
+            7,
+            7,
+            7,
+            0,
+            6,
+            6,
+            0,
+            0,
+            1,
+            0,
+            5,
+            6,
+            6,
+            6,
+            6,
+            0
+        ],
+        "scores": {
+            "1": 0,
+            "2": 0
+        },
+        "current_player": 2,
+        "joueur1_present": 1,
+        "joueur2_present": 1
+    },
+    "F81D83": {
+        "tableau": [
+            0,
+            9,
+            9,
+            8,
+            8,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            8,
+            9,
+            8,
+            8,
+            0,
+            0,
+            0
+        ],
+        "scores": {
+            "1": 0,
+            "2": 0
+        },
+        "current_player": 1,
+        "joueur1_present": 1,
+        "joueur2_present": 1
+    },
+    "E6D670": {
+        "tableau": [
+            0,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            0,
+            0,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            0
+        ],
+        "scores": {
+            "1": 0,
+            "2": 0
+        },
+        "current_player": 1,
+        "joueur1_present": 1,
+        "joueur2_present": 0
+    },
+    "F31265": {
+        "tableau": [
+            0,
+            0,
+            6,
+            7,
+            0,
+            8,
+            8,
+            8,
+            0,
+            0,
+            7,
+            7,
+            7,
+            6,
+            0,
+            2,
+            2,
+            0
+        ],
+        "scores": {
+            "1": 2,
+            "2": 0
+        },
+        "current_player": 2,
+        "joueur1_present": 1,
+        "joueur2_present": 1
+    },
+    "726DD5": {
+        "tableau": [
+            0,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            0,
+            0,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            0
+        ],
+        "scores": {
+            "1": 0,
+            "2": 0
+        },
+        "current_player": 1,
+        "joueur1_present": 1,
+        "joueur2_present": 1
+    }
+}

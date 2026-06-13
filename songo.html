@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Songo</title>
+    <link rel="stylesheet" href="songo.css">
+</head>
+<body>
+    <nav>
+        <h1>Jeux de Songo</h1>
+        <p>Par: TIENTCHEU WONSI DILANE 24H2589  UY1</p>
+    </nav>
+    <main> 
+        <!-- formulaire de debut -->
+        <div id="modal">
+            <div id="menu">
+                <div id="status">Veuillez créer ou rejoindre une partie.</div>
+                
+                <div class="creer">
+                    <button id="btn1" class="tours" style="cursor:pointer; background-color: #e1b16a;">Créer une partie</button>
+                    
+                    <div class="rejoindre">
+                        <input type="text" id="code" placeholder="Code" style="padding: 8px; border-radius: 20px; border: 2px solid #a37027; text-align: center; font-weight: bold; width: 120px;">
+                        <button id="btn2" class="tours" style="cursor:pointer;">Rejoindre</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tour">Tour du Joueur 1</div>
+        <!-- Tableau des cases-->
+        <div class="grid" style="pointer-events: none;">
+            <div class="casse" id="pit0" style="border-top-left-radius: 10px;"></div>
+            <div class="casse" id="pit1"></div>
+            <div class="casse" id="pit2"></div>
+            <div class="casse" id="pit3"></div>
+            <div class="casse" id="pit4"></div>
+            <div class="casse" id="pit5"></div>
+            <div class="casse" id="pit6"></div>
+            <div class="casse" id="pit7"></div>
+            <div class="casse" id="pit8" style="border-top-right-radius: 10px;"></div>
+            <div class="casse" id="pit9" style="border-bottom-left-radius: 10px;"></div>
+            <div class="casse" id="pit10"></div>
+            <div class="casse" id="pit11"></div>
+            <div class="casse" id="pit12"></div>
+            <div class="casse" id="pit13"></div>
+            <div class="casse" id="pit14"></div>
+            <div class="casse" id="pit15"></div>
+            <div class="casse" id="pit16"></div>
+            <div class="casse" id="pit17" style="border-bottom-right-radius: 10px;"></div>
+        </div>
+        <audio src="song.mp3" id = "audio" autoplay loop></audio>
+        <button id="btn3" class="tours">Ajouter du song</button>
+    </main>
+    <script src="gsap.min.js"></script>
+    <script src="songo.js"></script>
+</body>
+</html>

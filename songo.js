@@ -8,7 +8,7 @@ let pret = false;
 
 
 const pits = document.querySelectorAll(".casse");
-const path = [10, 11, 12, 13, 14, 15, 16, 7, 6, 5, 4, 3, 2, 1];
+const path = [16, 15, 14, 13, 12, 11, 10, 1, 2, 3, 4, 5, 6, 7];
 const playablePits = new Set(path);        
 const scorePits = new Set([0, 17]);         
 const deadPits = new Set([8, 9]);            
@@ -18,11 +18,15 @@ document.querySelector(".tour").style.display = "none";
 const audioBtn = document.getElementById("btn3");
 const audio = document.getElementById("audio");
 audioBtn.addEventListener('click', () =>{
-    audio.play().then( () =>{
+    audioBtn.innerHTML=="Ajouter du song" ? audio.play().then( () =>{
         audioBtn.innerHTML = "Retirer le song";
     }).catch((error) =>{
         console.log(error);
-    })
+    }) : audio.pause().then( () =>{
+        audioBtn.innerHTML = "Ajouter du song";
+    }).catch((error) =>{
+        console.log(error);
+    });
 });
 
 

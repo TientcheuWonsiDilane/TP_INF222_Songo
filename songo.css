@@ -71,6 +71,7 @@ main {
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: repeat(2, auto);
   gap: 0;
+  opacity: 0;
 }
 
 .casse {
@@ -117,6 +118,7 @@ main {
   background-color: #ccc;
   color: black;
   font-weight: bold;
+  display: none;
 }
 
 .tours {
@@ -127,6 +129,7 @@ main {
   background-color: #ccc;
   color: black;
   font-weight: bold;
+  cursor: pointer;
 }
 
 #modal {

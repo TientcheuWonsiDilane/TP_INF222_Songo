@@ -26,14 +26,9 @@ audioBtn.addEventListener("click", () => {
         .catch((error) => {
           console.log(error);
         })
-    : audio
-        .pause()
-        .then(() => {
-          audioBtn.innerHTML = "Ajouter du song";
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+    : audio.pause();
+      audioBtn.innerHTML = "Ajouter du song";
+        
 });
 
 //Button de creation de prtie
